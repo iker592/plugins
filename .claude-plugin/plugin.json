@@ -1,0 +1,20 @@
+{
+  "name": "iker-dev-skills",
+  "version": "1.0.0",
+  "description": "Collection of development skills for Python backend projects with uv package manager, including verification scripts, CI/CD templates, and best practices",
+  "author": {
+    "name": "Iker",
+    "url": "https://github.com/iker592"
+  },
+  "repository": "https://github.com/iker592/skills",
+  "license": "MIT",
+  "keywords": [
+    "python",
+    "uv",
+    "backend",
+    "testing",
+    "linting",
+    "ci-cd",
+    "docker"
+  ]
+}
