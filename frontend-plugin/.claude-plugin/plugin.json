@@ -1,0 +1,23 @@
+{
+  "name": "frontend-plugin",
+  "version": "0.1.0",
+  "description": "Comprehensive frontend development plugin for TypeScript, React, and Vite projects using Bun. Includes verification workflows, code review, templates, and best practices.",
+  "author": {
+    "name": "Iker",
+    "url": "https://github.com/iker592"
+  },
+  "repository": "https://github.com/iker592/plugins/frontend-plugin",
+  "homepage": "https://github.com/iker592/plugins",
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "react",
+    "vite",
+    "bun",
+    "frontend",
+    "testing",
+    "linting",
+    "ci-cd",
+    "code-review"
+  ]
+}

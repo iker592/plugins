@@ -21,6 +21,24 @@ https://github.com/iker592/plugins/coding-plugin
 
 **Documentation:** [coding-plugin/README.md](./coding-plugin/README.md)
 
+### [frontend-plugin](./frontend-plugin/)
+
+Comprehensive frontend development plugin for TypeScript, React, and Vite projects using Bun.
+
+**Features:**
+- **Skills**: bun-vite-react skill with verification workflows, templates, and best practices
+- **Agents**: react-ts-reviewer agent for comprehensive code review
+- **Verification**: ESLint, Prettier, TypeScript, Vitest with coverage
+- **Templates**: Configuration files for Bun + Vite + React + TypeScript projects
+- **CI/CD**: GitHub Actions and Docker templates
+
+**Installation:**
+```
+https://github.com/iker592/plugins/frontend-plugin
+```
+
+**Documentation:** [frontend-plugin/README.md](./frontend-plugin/README.md)
+
 ## Installation
 
 To install a plugin in Claude Code:
