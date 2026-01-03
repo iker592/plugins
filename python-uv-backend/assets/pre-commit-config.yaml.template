@@ -1,0 +1,55 @@
+# Pre-commit hooks for Python + uv projects
+# Install: uv run pre-commit install
+# Run manually: uv run pre-commit run --all-files
+
+repos:
+  # Ruff for linting and formatting
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      # Run the linter
+      - id: ruff
+        args: [--fix]
+      # Run the formatter
+      - id: ruff-format
+
+  # Type checking with mypy
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.13.0
+    hooks:
+      - id: mypy
+        additional_dependencies: []
+        # Add types packages as needed, e.g.:
+        # additional_dependencies: [types-requests]
+
+  # General file checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      # Check for files that would conflict in case-insensitive filesystems
+      - id: check-case-conflict
+      # Ensure files end with a newline
+      - id: end-of-file-fixer
+      # Trim trailing whitespace
+      - id: trailing-whitespace
+      # Check for merge conflict markers
+      - id: check-merge-conflict
+      # Check YAML files for syntax errors
+      - id: check-yaml
+      # Check TOML files for syntax errors
+      - id: check-toml
+      # Check JSON files for syntax errors
+      - id: check-json
+      # Prevent committing large files
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      # Detect private keys
+      - id: detect-private-key
+
+  # Security checks
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+        exclude: package.lock.json
