@@ -1,0 +1,22 @@
+{
+  "name": "backend-plugin",
+  "version": "1.0.0",
+  "description": "Comprehensive backend development plugin with skills, agents, and commands for Python projects with uv package manager, including verification scripts, CI/CD templates, and best practices",
+  "author": {
+    "name": "Iker",
+    "url": "https://github.com/iker592"
+  },
+  "repository": "https://github.com/iker592/plugins/backend-plugin",
+  "homepage": "https://github.com/iker592/plugins",
+  "license": "MIT",
+  "keywords": [
+    "python",
+    "uv",
+    "backend",
+    "testing",
+    "linting",
+    "ci-cd",
+    "docker",
+    "development"
+  ]
+}

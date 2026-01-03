@@ -4,22 +4,22 @@ A collection of Claude Code plugins for development workflows, skills, agents, a
 
 ## Available Plugins
 
-### [coding-plugin](./coding-plugin/)
+### [backend-plugin](./backend-plugin/)
 
-Comprehensive coding plugin for Python backend development with uv package manager.
+Comprehensive backend development plugin for Python projects with uv package manager.
 
 **Features:**
 - **Skills**: python-uv-backend skill with verification scripts, templates, and best practices
-- **Agents**: Placeholder for specialized development agents
-- **Commands**: Placeholder for custom slash commands
-- **Hooks**: Placeholder for automated workflows
+- **Verification**: ruff, mypy, pytest with coverage
+- **Templates**: Configuration files for Python + uv projects
+- **CI/CD**: GitHub Actions and Docker templates
 
 **Installation:**
 ```
-https://github.com/iker592/plugins/coding-plugin
+https://github.com/iker592/plugins/backend-plugin
 ```
 
-**Documentation:** [coding-plugin/README.md](./coding-plugin/README.md)
+**Documentation:** [backend-plugin/README.md](./backend-plugin/README.md)
 
 ### [frontend-plugin](./frontend-plugin/)
 
@@ -84,20 +84,10 @@ plugin-name/
 
 ```
 plugins/
-├── coding-plugin/           # Python development plugin
-├── (future plugins)         # More plugins coming soon
+├── backend-plugin/          # Python + uv backend development
+├── frontend-plugin/         # Bun + Vite + React + TypeScript frontend development
 └── README.md               # This file
 ```
-
-## Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Add or improve a plugin
-4. Test thoroughly
-5. Submit a pull request
 
 ## License
 
