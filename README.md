@@ -1,122 +1,93 @@
-# Skills for AI Agents
+# Claude Code Plugins
 
-A Claude Code plugin providing development skills, agents, commands, and automation for software engineering workflows.
+A collection of Claude Code plugins for development workflows, skills, agents, and automation.
+
+## Available Plugins
+
+### [coding-plugin](./coding-plugin/)
+
+Comprehensive coding plugin for Python backend development with uv package manager.
+
+**Features:**
+- **Skills**: python-uv-backend skill with verification scripts, templates, and best practices
+- **Agents**: Placeholder for specialized development agents
+- **Commands**: Placeholder for custom slash commands
+- **Hooks**: Placeholder for automated workflows
+
+**Installation:**
+```
+https://github.com/iker592/plugins/coding-plugin
+```
+
+**Documentation:** [coding-plugin/README.md](./coding-plugin/README.md)
 
 ## Installation
 
-Add this plugin to Claude Code by adding the repository URL to your plugin settings:
+To install a plugin in Claude Code:
 
-```
-https://github.com/iker592/skills
-```
+1. Open Claude Code settings
+2. Navigate to Plugins section
+3. Add plugin URL: `https://github.com/iker592/plugins/<plugin-name>`
 
-Or clone locally and add the path:
+Or clone locally:
 
 ```bash
-git clone https://github.com/iker592/skills.git
-# Add local path in Claude Code settings
+git clone https://github.com/iker592/plugins.git
+# Add local path to Claude Code settings
 ```
 
 ## Plugin Structure
 
+Each plugin follows the [Claude Code Plugin Structure](https://code.claude.com/docs/en/plugins-reference):
+
 ```
-skills/
+plugin-name/
 ├── .claude-plugin/           # Plugin metadata
-│   └── plugin.json          # Plugin configuration
+│   └── plugin.json          # Required configuration
 ├── skills/                   # Agent Skills
-│   └── python-uv-backend/   # Python + uv development skill
-├── agents/                   # Standalone agents (future)
-├── commands/                 # Slash commands (future)
-├── hooks/                    # Hook configurations (future)
-├── scripts/                  # Shared utility scripts (future)
-├── LICENSE                   # MIT License
-└── README.md                # This file
+├── agents/                   # Standalone agents
+├── commands/                 # Slash commands
+├── hooks/                    # Event hooks
+├── scripts/                  # Utility scripts
+├── LICENSE                   # License file
+└── README.md                # Plugin documentation
 ```
 
-## Available Skills
+## Creating a New Plugin
 
-### python-uv-backend
+1. Create directory: `mkdir my-plugin`
+2. Add `.claude-plugin/plugin.json` with metadata
+3. Add components: skills, agents, commands, hooks, scripts
+4. Add README.md documenting the plugin
+5. Test the plugin
+6. Submit a pull request
 
-Build, lint, format, run unit tests, and verify Python backend applications using uv package manager.
+## Repository Structure
 
-**Features:**
-- Automated verification script (lint, format, type check, test)
-- Pre-commit hooks setup
-- Configuration templates for ruff, mypy, pytest
-- CI/CD templates (GitHub Actions, GitLab CI)
-- Docker multi-stage build template
-- Comprehensive best practices and troubleshooting guides
-
-**Usage:**
-- Triggered automatically when working with Python + uv projects
-- Provides scripts and templates for project setup
-- See [skills/python-uv-backend/SKILL.md](skills/python-uv-backend/SKILL.md) for details
-
-**Packaged version:** `python-uv-backend.skill` (ready to install separately)
-
-## Directory Purpose
-
-### skills/
-Agent Skills that extend Claude's capabilities with specialized knowledge, workflows, and tools. Each skill is a self-contained package with:
-- `SKILL.md` - Instructions and documentation
-- `scripts/` - Executable code (optional)
-- `references/` - Reference documentation (optional)
-- `assets/` - Templates and files (optional)
-
-See [skills/README.md](skills/README.md) for more details.
-
-### agents/
-Standalone agent definitions for specialized AI assistants. Agents are configured for specific tasks or domains with custom prompts and tool access.
-
-See [agents/README.md](agents/README.md) for more details.
-
-### commands/
-Custom slash commands for quick access to common workflows and templated responses.
-
-See [commands/README.md](commands/README.md) for more details.
-
-### hooks/
-Hook configurations for automated actions triggered by events in Claude Code (e.g., auto-format after file edits).
-
-See [hooks/README.md](hooks/README.md) for more details.
-
-### scripts/
-Shared utility scripts used by hooks, agents, and commands (e.g., formatters, linters, validators).
-
-See [scripts/README.md](scripts/README.md) for more details.
+```
+plugins/
+├── coding-plugin/           # Python development plugin
+├── (future plugins)         # More plugins coming soon
+└── README.md               # This file
+```
 
 ## Contributing
 
-### Adding a New Skill
+Contributions are welcome! Please:
 
-1. Create directory: `skills/your-skill-name/`
-2. Add `SKILL.md` with YAML frontmatter and instructions
-3. Optionally add `scripts/`, `references/`, `assets/`
-4. Test the skill
-5. Package: `zip -r your-skill-name.skill skills/your-skill-name/`
-6. Update this README
-
-### Adding Other Components
-
-- **Agents**: Create `.md` file in `agents/`
-- **Commands**: Create `.md` file in `commands/`
-- **Hooks**: Create or update `hooks.json` in `hooks/`
-- **Scripts**: Add executable scripts to `scripts/`
-
-## Plugin Development
-
-This plugin follows the [Claude Code Plugin Structure](https://code.claude.com/docs/en/plugins-reference).
-
-**Key files:**
-- `.claude-plugin/plugin.json` - Plugin metadata and configuration
-- Each component directory has its own README with detailed guidance
+1. Fork the repository
+2. Create a feature branch
+3. Add or improve a plugin
+4. Test thoroughly
+5. Submit a pull request
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details.
+Each plugin has its own license. See individual plugin directories for details.
 
 ## Links
 
-- **Repository**: https://github.com/iker592/skills
+- **Repository**: https://github.com/iker592/plugins
 - **Claude Code Docs**: https://code.claude.com/docs
-- **Issue Tracker**: https://github.com/iker592/skills/issues
+- **Plugin Reference**: https://code.claude.com/docs/en/plugins-reference
+- **Issue Tracker**: https://github.com/iker592/plugins/issues
